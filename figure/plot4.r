@@ -5,6 +5,7 @@ power.data<-transform(power.data, DateTime=strptime(paste(Date,Time), "%d/%m/%Y 
 power.data<-power.data[,3:10]
 head(power.data)
 
+Sys.setlocale(,"C")
 png(filename="plot4.png", width=480, height=480)
 
 par(mfrow=c(2,2))

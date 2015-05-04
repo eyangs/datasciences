@@ -5,6 +5,8 @@ power.data<-transform(power.data, DateTime=strptime(paste(Date,Time), "%d/%m/%Y 
 power.data<-power.data[,3:10]
 head(power.data)
 
+
+Sys.setlocale(,"C")
 png(filename="plot3.png", width=480, height=480)
 
 plot(power.data$DateTime, power.data$Sub_metering_1, ylab="Energy sub metering", type="l", xlab="")
